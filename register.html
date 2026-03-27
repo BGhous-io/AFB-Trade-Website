@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | AFB Trade & Services Inc.</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .auth-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - var(--header-height));
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e2e8f0 100%);
+            padding: 4rem 1rem;
+            margin-top: var(--header-height);
+        }
+        
+        .auth-card {
+            background: var(--color-white);
+            width: 100%;
+            max-width: 550px;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border-top: 4px solid var(--color-accent);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .auth-header i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .auth-header h1 {
+            font-size: 1.75rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-header p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            border-top: 1px solid var(--color-border);
+            padding-top: 1.5rem;
+        }
+
+        .auth-footer a {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .auth-footer a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Password Toggle */
+        .password-container {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--color-text-light);
+        }
+        
+        .password-toggle:hover {
+            color: var(--color-primary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 500px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- ══════════════════════════════════════
+       AFB HEADER
+       ══════════════════════════════════════ -->
+    <header>
+      <div class="afb-header">
+        <!-- LOGO -->
+        <a href="index.html" class="afb-logo">
+          <div class="afb-logo-icon">
+            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+              <defs><clipPath id="globeClip"><circle cx="19" cy="20" r="16"/></clipPath></defs>
+              <circle cx="19" cy="20" r="16" fill="#1A2E4A"/>
+              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
+                <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
+              </g>
+              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
+                <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
+              </g>
+              <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4"/>
+              <circle cx="30" cy="31" r="8" fill="#15243B"/>
+              <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
+              <g transform="translate(30,31) scale(0.155)">
+                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
+              </g>
+            </svg>
+          </div>
+          <div class="afb-logo-text">
+            <span class="afb-logo-monogram">AFB</span>
+            <span class="afb-logo-tagname">Trade &amp; Services</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="afb-nav">
+          <a href="index.html" >Home</a>
+          <a href="about.html" >About Us</a>
+          <a href="immigration.html" >Immigration</a>
+          <a href="trading.html" >Trading &amp; Export</a>
+          <a href="real-estate.html" >Real Estate</a>
+          <a href="contact.html" >Contact</a>
+        </nav>
+
+        <!-- LOGIN BUTTON -->
+        <a href="login.html" class="afb-btn-login" style="text-decoration: none;">Login</a>
+
+        <!-- HAMBURGER (mobile) -->
+        <button class="afb-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="afb-header-rule"></div>
+      <!-- MOBILE NAV DRAWER -->
+      <nav class="afb-mobile-nav" id="mobileNav">
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About Us</a>
+        <a href="immigration.html" >Immigration</a>
+        <a href="trading.html" >Trading &amp; Export</a>
+        <a href="real-estate.html" >Real Estate</a>
+        <a href="contact.html" >Contact</a>
+        <a href="login.html" class="afb-mobile-login">Login</a>
+      </nav>
+    </header>
+
+    <!-- Authentication Section -->
+    <section class="auth-section">
+        <div class="auth-card animate-on-scroll">
+            <div class="auth-header">
+                <i class="fa-solid fa-user-plus"></i>
+                <h1>Create an Account</h1>
+                <p>Register for access to your dedicated portal.</p>
+            </div>
+            
+            <div id="registerFeedback" class="form-feedback" style="display: none;"></div>
+
+            <form id="registerForm" action="#" method="post" novalidate>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="John">
+                        <div id="firstNameError" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Doe">
+                        <div id="lastNameError" class="error-message"></div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="regEmail" style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">Email Address</label>
+                    <input type="email" id="regEmail" name="email" class="form-control" placeholder="name@example.com">
+                    <div id="regEmailError" class="error-message"></div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="regPassword" style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">Create Password</label>
+                    <div class="password-container">
+                        <input type="password" id="regPassword" name="password" class="form-control" placeholder="••••••••">
+                        <i class="fa-solid fa-eye password-toggle" id="toggleRegPassword"></i>
+                    </div>
+                    <div id="regPasswordError" class="error-message"></div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="regInterest" style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">Primary Interest</label>
+                    <select id="regInterest" class="form-control">
+                        <option value="">-- Select Interest --</option>
+                        <option value="immigration">Immigration Services</option>
+                        <option value="trading">Trading & Export</option>
+                        <option value="realestate">Real Estate</option>
+                    </select>
+                    <div id="regInterestError" class="error-message"></div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 0.5rem;">
+                    <input type="checkbox" id="agreeTerms" style="cursor: pointer; margin-top: 5px;">
+                    <label for="agreeTerms" style="font-size: 0.85rem; cursor: pointer;">I agree to the <a href="terms.html" target="_blank" style="color: var(--color-accent); text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" target="_blank" style="color: var(--color-accent); text-decoration: underline;">Privacy Policy</a>.</label>
+                </div>
+                <div id="termsError" class="error-message"></div>
+                
+                <button type="submit" id="btnRegSubmit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Sign In</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Script for Auth -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://jblpdggxkcrfraoktumw.supabase.co';
+        const supabaseKey = 'sb_publishable_xl2vu1yL4J7A5bQCX6vA0A_2GSapFku';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+        document.addEventListener('DOMContentLoaded', () => {
+            // Password Visibility Toggle
+            const toggleRegPassword = document.getElementById('toggleRegPassword');
+            const regPasswordInput = document.getElementById('regPassword');
+            
+            if(toggleRegPassword && regPasswordInput) {
+                toggleRegPassword.addEventListener('click', function () {
+                    const type = regPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    regPasswordInput.setAttribute('type', type);
+                    this.classList.toggle('fa-eye');
+                    this.classList.toggle('fa-eye-slash');
+                });
+            }
+
+            // Form Validation
+            const registerForm = document.getElementById('registerForm');
+            if(registerForm) {
+                registerForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    let isValid = true;
+                    
+                    const inputs = {
+                        first: document.getElementById('firstName'),
+                        last: document.getElementById('lastName'),
+                        email: document.getElementById('regEmail'),
+                        pass: document.getElementById('regPassword'),
+                        interest: document.getElementById('regInterest'),
+                        terms: document.getElementById('agreeTerms')
+                    };
+
+                    const errors = {
+                        first: document.getElementById('firstNameError'),
+                        last: document.getElementById('lastNameError'),
+                        email: document.getElementById('regEmailError'),
+                        pass: document.getElementById('regPasswordError'),
+                        interest: document.getElementById('regInterestError'),
+                        terms: document.getElementById('termsError')
+                    };
+
+                    const btnSubmit = document.getElementById('btnRegSubmit');
+                    const feedback = document.getElementById('registerFeedback');
+
+                    // Reset
+                    Object.values(inputs).forEach(input => {
+                        if (input.classList) input.classList.remove('is-invalid');
+                    });
+                    Object.values(errors).forEach(err => err.style.display = 'none');
+                    feedback.style.display = 'none';
+
+                    // Validations
+                    if (inputs.first.value.trim().length < 2) {
+                        inputs.first.classList.add('is-invalid');
+                        errors.first.textContent = 'Required.';
+                        errors.first.style.display = 'block';
+                        isValid = false;
+                    }
+                    if (inputs.last.value.trim().length < 2) {
+                        inputs.last.classList.add('is-invalid');
+                        errors.last.textContent = 'Required.';
+                        errors.last.style.display = 'block';
+                        isValid = false;
+                    }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(inputs.email.value.trim())) {
+                        inputs.email.classList.add('is-invalid');
+                        errors.email.textContent = 'Invalid email address.';
+                        errors.email.style.display = 'block';
+                        isValid = false;
+                    }
+                    if (inputs.pass.value.length < 6) {
+                        inputs.pass.classList.add('is-invalid');
+                        errors.pass.textContent = 'Password must be at least 6 characters.';
+                        errors.pass.style.display = 'block';
+                        isValid = false;
+                    }
+                    if (inputs.interest.value === "") {
+                        inputs.interest.classList.add('is-invalid');
+                        errors.interest.textContent = 'Please select a primary interest.';
+                        errors.interest.style.display = 'block';
+                        isValid = false;
+                    }
+                    if (!inputs.terms.checked) {
+                        errors.terms.textContent = 'You must agree to the terms to continue.';
+                        errors.terms.style.display = 'block';
+                        isValid = false;
+                    }
+
+                    if (!isValid) return;
+
+                    btnSubmit.innerHTML = 'Creating Account... <span class="loading-spinner" style="display:inline-block;"></span>';
+                    btnSubmit.disabled = true;
+
+                    const { data, error } = await supabaseClient.auth.signUp({
+                        email: inputs.email.value.trim(),
+                        password: inputs.pass.value,
+                        options: {
+                            data: {
+                                first_name: inputs.first.value.trim(),
+                                last_name: inputs.last.value.trim(),
+                                interest: inputs.interest.value
+                            }
+                        }
+                    });
+
+                    if (error) {
+                        feedback.className = 'form-feedback error';
+                        feedback.style.display = 'block';
+                        feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> ' + error.message;
+                        btnSubmit.innerHTML = 'Create Account';
+                        btnSubmit.disabled = false;
+                    } else {
+                        feedback.className = 'form-feedback success';
+                        feedback.style.display = 'block';
+                        feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Account created! Please check your email for the confirmation link before logging in.';
+                        registerForm.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

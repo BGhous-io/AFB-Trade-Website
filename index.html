@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFB Trade & Services Inc. - Canadian Immigration, Trading & Real Estate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <meta name="description" content="Canada's premier company offering professional Immigration Consultancy, Imports & Exports, and Real Estate services across North America and the Arabian Gulf.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+
+    <!-- ══════════════════════════════════════
+       AFB HEADER
+       ══════════════════════════════════════ -->
+    <header>
+      <div class="afb-header">
+        <!-- LOGO -->
+        <a href="index.html" class="afb-logo">
+          <div class="afb-logo-icon">
+            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+              <defs><clipPath id="globeClip"><circle cx="19" cy="20" r="16"/></clipPath></defs>
+              <circle cx="19" cy="20" r="16" fill="#1A2E4A"/>
+              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
+                <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
+              </g>
+              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
+                <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
+              </g>
+              <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4"/>
+              <circle cx="30" cy="31" r="8" fill="#15243B"/>
+              <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
+              <g transform="translate(30,31) scale(0.155)">
+                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
+              </g>
+            </svg>
+          </div>
+          <div class="afb-logo-text">
+            <span class="afb-logo-monogram">AFB</span>
+            <span class="afb-logo-tagname">Trade &amp; Services</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="afb-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html" >About Us</a>
+          <a href="immigration.html" >Immigration</a>
+          <a href="trading.html" >Trading &amp; Export</a>
+          <a href="real-estate.html" >Real Estate</a>
+          <a href="contact.html" >Contact</a>
+        </nav>
+
+        <!-- LOGIN BUTTON -->
+        <a href="login.html" class="afb-btn-login" style="text-decoration: none;">Login</a>
+
+        <!-- HAMBURGER (mobile) -->
+        <button class="afb-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="afb-header-rule"></div>
+      <!-- MOBILE NAV DRAWER -->
+      <nav class="afb-mobile-nav" id="mobileNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html" >About Us</a>
+        <a href="immigration.html" >Immigration</a>
+        <a href="trading.html" >Trading &amp; Export</a>
+        <a href="real-estate.html" >Real Estate</a>
+        <a href="contact.html" >Contact</a>
+        <a href="login.html" class="afb-mobile-login">Login</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Your Ultimate Immigration & Trade Solution</span>
+                <h1>Expanding Horizons Across Canada & The Gulf</h1>
+                <p>An honest, sincere, and highly professional approach to your migration, trading, and real estate needs. Trust our global expertise to guide you to success.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-accent">Get a Free Evaluation</a>
+                    <a href="#services" class="btn btn-outline">Explore Our Services</a>
+                </div>
+            </div>
+            
+            <!-- 3D INTERACTIVE LOGO -->
+            <div class="hero-visual" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
+                <div class="logo-3d-wrapper">
+                    <div class="logo-3d-glow"></div>
+                    <svg width="350" height="350" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" class="logo-3d-svg">
+                        <defs><clipPath id="globeClip3d"><circle cx="19" cy="20" r="16"/></clipPath></defs>
+                        <circle cx="19" cy="20" r="16" fill="#1A2E4A" class="layer layer-base"/>
+                        <g clip-path="url(#globeClip3d)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7" class="layer layer-grid">
+                            <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
+                            <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
+                        </g>
+                        <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4" class="layer layer-ring"/>
+                        
+                        <g class="layer layer-leaf">
+                            <circle cx="30" cy="31" r="8" fill="#15243B"/>
+                            <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
+                            <g transform="translate(30,31) scale(0.155)">
+                                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Guarantee Banner -->
+    <div class="guarantee-banner animate-on-scroll">
+        <div class="container">
+            <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1rem;"></i>
+            <h2>No Success, No Fee*</h2>
+            <p>Our commitment to you: We only succeed when you do. Professionalism backed by a guarantee.</p>
+        </div>
+    </div>
+
+    <!-- Company Introduction -->
+    <section class="section glass-section">
+        <div class="glass-shape-1"></div>
+        <div class="glass-shape-2"></div>
+        <div class="container relative" style="z-index: 1;">
+            <div class="section-title animate-on-scroll">
+                <h2>Welcome to AFB Trade & Services Inc.</h2>
+            </div>
+            <div class="glass-card text-center animate-on-scroll" style="max-width: 900px; margin: 0 auto;">
+                <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--color-accent) !important; margin-bottom: 1.5rem;">
+                    AFB Trade & Services Inc. is a leading incorporated Canadian company specializing in Professional Immigration Consultancy, International Trade, and Real Estate. 
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    With strong roots in the Middle East and North America, we bridge the gap for professionals, businesses, and investors. From securing your Canadian dream to facilitating massive import/export operations, our experienced team provides end-to-end solutions.
+                </p>
+                <a href="about.html" class="btn btn-accent" style="margin-top: 1.5rem; font-weight: 600;">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section glass-section" id="services" style="background: linear-gradient(135deg, #0a192f 0%, #112240 100%);">
+        <div class="glass-shape-2" style="top: -100px; left: -100px; bottom: auto; right: auto;"></div>
+        <div class="glass-shape-1" style="bottom: -150px; right: -150px; top: auto; left: auto;"></div>
+        
+        <div class="container relative" style="z-index: 1;">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Premium Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Immigration Service -->
+                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fa-solid fa-passport service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
+                        <h3>Immigration & Visas</h3>
+                        <p style="margin-bottom: 2rem;">Comprehensive Canadian immigration consultancy. Skilled Workers, Business Investors, Students, and Family Sponsorships.</p>
+                    </div>
+                    <a href="immigration.html" class="btn btn-outline" style="width: 100%;">Read More</a>
+                </div>
+                
+                <!-- Trading Service -->
+                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fa-solid fa-ship service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
+                        <h3>Trading & Export</h3>
+                        <p style="margin-bottom: 2rem;">Facilitating international trade between North America, Europe, and the Middle East. Specialized in commodities, electronics, and wholesale.</p>
+                    </div>
+                    <a href="trading.html" class="btn btn-outline" style="width: 100%;">Read More</a>
+                </div>
+                
+                <!-- Real Estate -->
+                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <i class="fa-solid fa-building service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
+                        <h3>Real Estate</h3>
+                        <p style="margin-bottom: 2rem;">Premium real estate services for newcomers and investors in Canada. Buying, selling, leasing, and property management.</p>
+                    </div>
+                    <a href="real-estate.html" class="btn btn-outline" style="width: 100%;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" style="display: none;">
+        <div class="testimonials-bg-shape"></div>
+        <div class="testimonials-bg-shape-2"></div>
+        <div class="container relative" style="z-index: 2;">
+            <div class="section-title animate-on-scroll">
+                <h2 style="color: var(--color-white);">Client Success Stories</h2>
+                <p style="color: var(--color-accent);">Don't just take our word for it.</p>
+            </div>
+            
+            <div class="testimonial-carousel entrance-anim">
+                
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <p class="testimonial-content">
+                        "AFB Trade completely delivered on their 'No Success, No Fee' guarantee. The immigration experts secured my skilled worker visa in record time, and their settlement services made finding a home in the Greater Toronto Area effortless."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Mohammed A.</h4>
+                            <p>Skilled Worker Migrant, UAE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <p class="testimonial-content">
+                        "Expanding our import operations to North America seemed daunting until we partnered with AFB. Their global trading network and professional sincerity bridged the gap instantly. They are a prime business partner."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah L.</h4>
+                            <p>Import/Export Director, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <p class="testimonial-content">
+                        "As a commercial investor, finding the right property in Canada was critical. The AFB real estate division provided analytical tools and market insight that secured an incredible plaza for my portfolio."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">F</div>
+                        <div class="author-info">
+                            <h4>Fahad T.</h4>
+                            <p>Real Estate Investor, Qatar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <p class="testimonial-content">
+                        "Highly professional and rigorously honest. Unlike other consultancies, AFB truly cared about my family's transition to Ontario. Their guidance on community integration and finding schools was invaluable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>Jasmine P.</h4>
+                            <p>Family Sponsorship, India</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-dark text-center" style="text-align: center;">
+        <div class="container animate-on-scroll">
+            <h2>Ready to Start Your Journey?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Contact our experts today for a confidential consultation of your business, immigration, or real estate needs.</p>
+            <a href="contact.html" class="btn btn-accent text-dark">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="max-width: 300px;">
+                    <h4><i class="fa-solid fa-earth-americas" style="color: var(--color-accent);"></i> AFB Trade & Services</h4>
+                    <p>Canada's premier agency connecting North America and the Arabian Gulf with professional consultancy.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="immigration.html">Immigration Services</a></li>
+                        <li><a href="trading.html">Trading & Export</a></li>
+                        <li><a href="real-estate.html">Real Estate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Greater Toronto Area, Canada</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(416) 844-3528</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@afbtrade.ca</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 AFB Trade & Services Inc. All rights reserved. | No Success, No Fee Guarantee terms apply.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
