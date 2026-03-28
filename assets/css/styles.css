@@ -337,6 +337,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
+  margin-top: -100px;
 }
 
 @media (max-width: 992px) {
