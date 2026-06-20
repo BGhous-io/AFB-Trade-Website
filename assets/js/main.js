@@ -1,308 +1,183 @@
-/*
- * AFB Trade & Services Inc.
- * Main JavaScript
- */
+/* ============================================================
+   AFB Trade & Services Inc. — shared site script
+   Vanilla JS, no dependencies.
+   ------------------------------------------------------------ */
+(function () {
+  "use strict";
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // ==========================================
-    // Page Transitions
-    // ==========================================
-    document.body.classList.add('loaded');
+  /* ---------- 1. Mobile nav drawer ---------------------------- */
+  const hamburger = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const body = document.body;
 
-    const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const target = this.href;
-            if (
-                !target || 
-                target.indexOf(window.location.origin) === -1 || 
-                e.ctrlKey || e.metaKey || e.shiftKey || 
-                this.getAttribute('target') === '_blank' || 
-                target.includes('mailto:') || 
-                target.includes('#')
-            ) {
-                return;
-            }
+  window.toggleMobileNav = function () {
+    if (!hamburger || !mobileNav) return;
+    const open = mobileNav.classList.toggle("is-open");
+    hamburger.classList.toggle("is-open", open);
+    hamburger.setAttribute("aria-expanded", String(open));
+    body.style.overflow = open ? "hidden" : "";
+  };
 
-            e.preventDefault();
-            document.body.classList.remove('loaded');
-            document.body.classList.add('fade-out');
-            
-            setTimeout(() => {
-                window.location.href = target;
-            }, 400); 
-        });
+  if (hamburger) {
+    hamburger.addEventListener("click", window.toggleMobileNav);
+  }
+  // Close mobile nav when a link is tapped
+  if (mobileNav) {
+    mobileNav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        mobileNav.classList.remove("is-open");
+        if (hamburger) hamburger.classList.remove("is-open");
+        body.style.overflow = "";
+      });
     });
+  }
 
-    window.addEventListener('pageshow', function (event) {
-        if (event.persisted) {
-            document.body.classList.remove('fade-out');
-            document.body.classList.add('loaded');
+  /* ---------- 2. Sticky header state shift -------------------- */
+  const header = document.querySelector(".site-header");
+  const updateHeader = function () {
+    if (!header) return;
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  /* ---------- 3. Scroll-reveal -------------------------------- */
+  const revealTargets = document.querySelectorAll(".animate-on-scroll");
+  if ("IntersectionObserver" in window && revealTargets.length) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
         }
-    });
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
 
-    // Sticky Header functionality
-    const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+    revealTargets.forEach(function (el) { io.observe(el); });
+  } else {
+    revealTargets.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ---------- 4. Destinations region filter ------------------- */
+  const filterBar = document.querySelector(".filter-bar");
+  const filterCards = document.querySelectorAll("[data-region]");
+  if (filterBar && filterCards.length) {
+    filterBar.addEventListener("click", function (e) {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      const region = btn.dataset.filter;
+
+      filterBar.querySelectorAll(".filter-btn").forEach(function (b) {
+        b.classList.toggle("is-active", b === btn);
+      });
+
+      filterCards.forEach(function (card) {
+        const matches = region === "all" || card.dataset.region === region;
+        card.style.display = matches ? "" : "none";
+      });
     });
-    
-    // Mobile Menu Toggle
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navList = document.querySelector('.nav-list');
-    
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-            
-            // Toggle icon between bars and times
-            const icon = mobileToggle.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+  }
+
+  /* ---------- 5. FAQ accordion -------------------------------- */
+  document.querySelectorAll(".faq-q").forEach(function (q) {
+    q.addEventListener("click", function () {
+      const item = q.closest(".faq-item");
+      if (!item) return;
+      const willOpen = !item.classList.contains("is-open");
+      // close all
+      item.parentElement.querySelectorAll(".faq-item").forEach(function (i) {
+        i.classList.remove("is-open");
+        const qi = i.querySelector(".faq-q");
+        if (qi) qi.setAttribute("aria-expanded", "false");
+      });
+      if (willOpen) {
+        item.classList.add("is-open");
+        q.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* ---------- 6. Animated counters (About stats) -------------- */
+  const counters = document.querySelectorAll("[data-count]");
+  if (counters.length && "IntersectionObserver" in window) {
+    const easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+    const animate = function (el) {
+      const target = parseFloat(el.dataset.count) || 0;
+      const duration = parseInt(el.dataset.duration, 10) || 1800;
+      const decimals = parseInt(el.dataset.decimals, 10) || 0;
+      const start = performance.now();
+      const tick = function (now) {
+        const p = Math.min((now - start) / duration, 1);
+        const value = target * easeOut(p);
+        el.textContent = value.toLocaleString(undefined, {
+          minimumFractionDigits: decimals,
+          maximumFractionDigits: decimals
         });
-    }
-    
-    // Scroll Animation (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.animate-on-scroll');
-    
-    const appearOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target.toLocaleString(undefined, {
+          minimumFractionDigits: decimals, maximumFractionDigits: decimals
+        });
+      };
+      requestAnimationFrame(tick);
     };
-    
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, appearOptions);
-    
-    fadeElements.forEach(element => {
-        appearOnScroll.observe(element);
+    const countIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          countIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    counters.forEach(function (c) { countIO.observe(c); });
+  }
+
+  /* ---------- 7. Smooth-scroll for in-page anchors ------------ */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    const href = a.getAttribute("href");
+    if (!href || href === "#" || href.length < 2) return;
+    a.addEventListener("click", function (e) {
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const offset = (document.querySelector(".site-header")?.offsetHeight || 0) + 8;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: top, behavior: "smooth" });
+      // Update hash without jumping
+      if (history.replaceState) history.replaceState(null, "", href);
     });
+  });
 
-    // Subtler Entrance Animations for Testimonials
-    const entranceElements = document.querySelectorAll('.entrance-anim');
-    const entranceObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Staggered delay for child elements
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 150);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+  /* ---------- 8. Footer copyright year ------------------------ */
+  document.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = String(new Date().getFullYear());
+  });
 
-    entranceElements.forEach(elem => entranceObserver.observe(elem));
-
-    // ==========================================
-    // Form Validation & Handling
-    // ==========================================
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default submission
-            
-            let isValid = true;
-            
-            // Elements
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const commentsInput = document.getElementById('comments');
-            const btnSubmit = document.getElementById('btnSubmit');
-            const spinner = document.querySelector('.loading-spinner');
-            const formFeedback = document.getElementById('formFeedback');
-            
-            // Error Msgs
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const commentsError = document.getElementById('commentsError');
-
-            // Reset states
-            [nameInput, emailInput, commentsInput].forEach(input => {
-                input.classList.remove('is-invalid', 'is-valid');
-            });
-            [nameError, emailError, commentsError].forEach(msg => {
-                msg.style.display = 'none';
-            });
-            formFeedback.className = 'form-feedback';
-            formFeedback.style.display = 'none';
-
-            // Validate Name
-            if (nameInput.value.trim().length < 2) {
-                nameInput.classList.add('is-invalid');
-                nameError.textContent = 'Please enter a valid name (at least 2 characters).';
-                nameError.style.display = 'block';
-                isValid = false;
-            } else {
-                nameInput.classList.add('is-valid');
-            }
-
-            // Validate Email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value.trim())) {
-                emailInput.classList.add('is-invalid');
-                emailError.textContent = 'Please enter a valid email address.';
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailInput.classList.add('is-valid');
-            }
-
-            // Validate Comments
-            if (commentsInput.value.trim().length < 10) {
-                commentsInput.classList.add('is-invalid');
-                commentsError.textContent = 'Please provide more details in your message (at least 10 characters).';
-                commentsError.style.display = 'block';
-                isValid = false;
-            } else {
-                commentsInput.classList.add('is-valid');
-            }
-
-            if (!isValid) return;
-
-            // Success Animation 
-            btnSubmit.innerHTML = 'Sending... <span class="loading-spinner" style="display:inline-block;"></span>';
-            btnSubmit.disabled = true;
-
-            // Send Data to Formspree
-            const formData = new FormData(contactForm);
-            
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                btnSubmit.innerHTML = 'Submit Form';
-                btnSubmit.disabled = false;
-                
-                if (response.ok) {
-                    // Show Success Message
-                    formFeedback.className = 'form-feedback success';
-                    formFeedback.style.display = 'block';
-                    formFeedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. We will get back to you shortly.';
-                    
-                    contactForm.reset();
-                    [nameInput, emailInput, commentsInput].forEach(input => {
-                        input.classList.remove('is-valid');
-                    });
-                } else {
-                    formFeedback.className = 'form-feedback error';
-                    formFeedback.style.display = 'block';
-                    formFeedback.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Oops! There was a problem submitting your form.';
-                }
-            }).catch(error => {
-                btnSubmit.innerHTML = 'Submit Form';
-                btnSubmit.disabled = false;
-                formFeedback.className = 'form-feedback error';
-                formFeedback.style.display = 'block';
-                formFeedback.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Oops! There was a network error preventing submission.';
-            });
-        });
-    }
-
-    // ==========================================
-    // Testimonial Auto-Scroll Carousel
-    // ==========================================
-    const carousel = document.querySelector('.testimonial-carousel');
-    if (carousel) {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-        let scrollTimer;
-
-        // Auto Scroll
-        const startAutoScroll = () => {
-            scrollTimer = setInterval(() => {
-                if (!isDown) { // Don't auto-scroll if user is dragging
-                    carousel.scrollBy({ left: 1, behavior: 'auto' });
-                    // Loop back to start if at end
-                    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
-                         // smooth resetting to the start
-                         carousel.scrollTo({ left: 0, behavior: 'smooth' });
-                    }
-                }
-            }, 30);
-        };
-
-        // Initialize auto scroll
-        startAutoScroll();
-
-        // Pause on hover
-        carousel.addEventListener('mouseenter', () => clearInterval(scrollTimer));
-        carousel.addEventListener('mouseleave', startAutoScroll);
-
-        // Allow manual drag scrolling
-        carousel.addEventListener('mousedown', (e) => {
-            isDown = true;
-            carousel.style.cursor = 'grabbing';
-            startX = e.pageX - carousel.offsetLeft;
-            scrollLeft = carousel.scrollLeft;
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            isDown = false;
-            carousel.style.cursor = 'grab';
-        });
-
-        carousel.addEventListener('mouseup', () => {
-            isDown = false;
-            carousel.style.cursor = 'grab';
-        });
-
-        carousel.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - carousel.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll-fast multiplier
-            carousel.scrollLeft = scrollLeft - walk;
-        });
-    }
-
-});
-
-    // ==========================================
-    // Magnetic Buttons & Micro-Interactions
-    // ==========================================
-    const magneticElements = document.querySelectorAll('.btn, .afb-btn-login');
-    
-    magneticElements.forEach((el) => {
-        el.addEventListener('mousemove', function(e) {
-            const pos = this.getBoundingClientRect();
-            const x = e.clientX - pos.left - pos.width / 2;
-            const y = e.clientY - pos.top - pos.height / 2;
-            
-            this.style.transform = `translate(${x * 0.2}px, ${y * 0.3}px) scale(1.02)`;
-            this.style.transition = 'transform 0.1s ease-out';
-        });
-        
-        el.addEventListener('mouseleave', function(e) {
-            this.style.transform = 'translate(0px, 0px) scale(1)';
-            this.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)'; // Springy bounce back
-        });
+  /* ---------- 9. Newsletter form (placeholder handler) -------- */
+  const newsletterForm = document.querySelector(".newsletter-form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = newsletterForm.querySelector("input[type=email]");
+      const btn = newsletterForm.querySelector("button");
+      if (!input || !input.value) return;
+      // Visual confirmation only — wire up a backend / Mailchimp later.
+      if (btn) btn.textContent = "Subscribed ✓";
+      input.value = "";
+      setTimeout(function () { if (btn) btn.textContent = "Subscribe"; }, 3200);
     });
+  }
 
-// Global function for new custom header navigation
-window.toggleMobileNav = function() {
-    const nav = document.getElementById('mobileNav');
-    if(nav) nav.classList.toggle('open');
-};
+  /* ---------- 10. Contact form (mailto fallback) -------------- */
+  // The contact form submits via mailto: as set in HTML — this is a
+  // soft fallback to validate inputs before triggering the mail client.
+  const contactForm = document.querySelector("#contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      if (!contactForm.checkValidity()) {
+        e.preventDefault();
+        contactForm.reportValidity();
+      }
+    });
+  }
+
+})();

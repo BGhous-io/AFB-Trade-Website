@@ -1,326 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFB Trade & Services Inc. - Canadian Immigration, Trading & Real Estate</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <meta name="description" content="Canada's premier company offering professional Immigration Consultancy, Imports & Exports, and Real Estate services across North America and the Arabian Gulf.">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFB Trade &amp; Services Inc. — Bridging Canada and the Gulf</title>
+  <meta name="description" content="A Canadian consultancy bridging North America and the Arabian Gulf. Professional immigration, international trade, and real-estate services delivered with honesty and care." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
+  <!-- ════════════════════════════════════════════════
+       HEADER (transparent over the home hero)
+       ════════════════════════════════════════════════ -->
+  <header class="site-header on-dark-hero">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><clipPath id="hdrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+          <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+          <g clip-path="url(#hdrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+            <line x1="6" y1="30" x2="50" y2="30"/>
+            <ellipse cx="28" cy="30" rx="22" ry="8"/>
+            <ellipse cx="28" cy="30" rx="22" ry="15"/>
+            <line x1="28" y1="8" x2="28" y2="52"/>
+            <ellipse cx="28" cy="30" rx="10" ry="22"/>
+            <ellipse cx="28" cy="30" rx="18" ry="22"/>
+          </g>
+          <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+          <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+          <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+          <g transform="translate(44 46) scale(0.22)">
+            <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
+          </g>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">AFB Trade</span>
+          <span class="brand-tag">&amp; Services Inc.</span>
+        </span>
+      </a>
 
-    <!-- ══════════════════════════════════════
-       AFB HEADER
-       ══════════════════════════════════════ -->
-    <header>
-      <div class="afb-header">
-        <!-- LOGO -->
-        <a href="index.html" class="afb-logo">
-          <div class="afb-logo-icon">
-            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-              <defs><clipPath id="globeClip"><circle cx="19" cy="20" r="16"/></clipPath></defs>
-              <circle cx="19" cy="20" r="16" fill="#1A2E4A"/>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="immigration.html">Immigration</a>
+        <a href="trading.html">Trading &amp; Export</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-accent btn-sm">Free Evaluation</a>
+      </nav>
+
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="immigration.html">Immigration</a>
+    <a href="trading.html">Trading &amp; Export</a>
+    <a href="real-estate.html">Real Estate</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-meta">
+      <span><i class="fa-solid fa-location-dot"></i>Greater Toronto Area, Canada</span>
+      <span><i class="fa-solid fa-phone"></i><a href="tel:+14165092198" style="color:inherit;">(416) 509-2198</a></span>
+      <span><i class="fa-solid fa-envelope"></i><a href="mailto:info@afbtrade.ca" style="color:inherit;">info@afbtrade.ca</a></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <img src="assets/images/hero-home.jpg"
+             alt="Toronto city skyline at golden hour, viewed across Lake Ontario." />
+      </div>
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow">Bridging Canada &amp; the Arabian Gulf</span>
+          <h1>A considered route to <em>Canada</em>, the Gulf, and beyond.</h1>
+          <p>For more than two decades, AFB Trade &amp; Services has guided professionals, families, and businesses through the consequential decisions that change a life — immigration, international trade, and where to call home.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-accent">Plan My Move <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#practice" class="btn btn-outline">Explore Our Practice</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         TRUST STRIP  (placeholder copy — see checklist)
+         ════════════════════════════════════════════════ -->
+    <section class="trust" aria-label="Why work with AFB Trade" data-placeholder>
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item animate-on-scroll">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <div>
+              <h4>Licensed &amp; Regulated</h4>
+              <p>Registered Canadian Immigration Consultants and incorporated under Ontario law.</p>
+            </div>
+          </div>
+          <div class="trust-item animate-on-scroll" data-delay="100">
+            <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+            <div>
+              <h4>20+ Years</h4>
+              <p>Two decades of moving families, capital, and businesses between continents.</p>
+            </div>
+          </div>
+          <div class="trust-item animate-on-scroll" data-delay="200">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <div>
+              <h4>Bilingual Team</h4>
+              <p>English, Arabic, Urdu, and Punjabi — you'll be understood at every step.</p>
+            </div>
+          </div>
+          <div class="trust-item animate-on-scroll" data-delay="300">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <div>
+              <h4>No Success, No Fee*</h4>
+              <p>We only succeed when you do. Conditions apply to qualifying engagements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         PRACTICE AREAS
+         ════════════════════════════════════════════════ -->
+    <section class="section" id="practice">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Our Practice</span>
+          <h2>Three disciplines, one quiet promise — get it right the first time.</h2>
+          <p class="text-muted">Whether you are settling a family, expanding a wholesale operation across continents, or placing capital into Canadian property, we work the same way: thoroughly, transparently, and with the patience that consequential decisions deserve.</p>
+        </div>
+
+        <div class="practice-grid">
+          <article class="practice-card animate-on-scroll">
+            <div class="card-media">
+              <img src="assets/images/card-immigration.jpg"
+                   alt="Modern downtown architecture in Toronto, Ontario." />
+            </div>
+            <div class="card-body">
+              <span class="card-eyebrow">01 · Immigration</span>
+              <h3>Pathways to Canada</h3>
+              <p>From skilled-worker and provincial streams to investor, study, and family-sponsorship routes — we identify the path that fits your profile and prepare every document to the standard IRCC expects.</p>
+              <a href="immigration.html" class="card-link">Immigration services <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="practice-card animate-on-scroll" data-delay="100">
+            <div class="card-media">
+              <img src="assets/images/card-trading.jpg"
+                   alt="Container ship docked at an international port, viewed from above." />
+            </div>
+            <div class="card-body">
+              <span class="card-eyebrow">02 · Trading &amp; Export</span>
+              <h3>International Commerce</h3>
+              <p>Commodities, electronics, and wholesale flows between North America, Europe, and the GCC. Sourcing, contracting, freight, and customs — handled by people who have done it for years.</p>
+              <a href="trading.html" class="card-link">Trade services <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="practice-card animate-on-scroll" data-delay="200">
+            <div class="card-media">
+              <img src="assets/images/card-realestate.jpg"
+                   alt="Contemporary Canadian residential architecture set against trees." />
+            </div>
+            <div class="card-body">
+              <span class="card-eyebrow">03 · Real Estate</span>
+              <h3>A Home, Then an Investment</h3>
+              <p>From first-home purchases for newcomers to multi-unit commercial portfolios, we help you read the market, understand the financing, and move with confidence.</p>
+              <a href="real-estate.html" class="card-link">Real estate services <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         FEATURED PROGRAMS (horizontal cards)
+         ════════════════════════════════════════════════ -->
+    <section class="section bg-cream-alt" aria-label="Featured immigration programs">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Featured Pathways</span>
+          <h2>Three programs we run start-to-finish.</h2>
+          <p class="text-muted">These are the routes we have prepared most often. Each one begins with an honest eligibility assessment — no application is opened until we are confident it will succeed.</p>
+        </div>
+
+        <div class="programs" data-placeholder>
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-express-entry.jpg"
+                   alt="A Canadian passport resting on a wooden surface beside a notebook." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta">
+                <span>Express Entry · CRS</span>
+                <span><strong>4 – 8 months</strong></span>
+              </div>
+              <h3>Skilled Worker — Express Entry</h3>
+              <p>For mid-career professionals with English/French fluency and a degree. We position your profile to score above the recent cut-off bands and shepherd every document through IRCC.</p>
+              <p class="program-price"><small>Engagement from</small>CAD&nbsp;$4,500</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>CRS optimisation and language-test strategy</li>
+                <li><i class="fa-solid fa-check"></i>ECA, document preparation, and ITA response</li>
+                <li><i class="fa-solid fa-check"></i>Landing &amp; settlement support in the GTA</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Request an Assessment <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- HIDDEN: Business & Investor program card
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-business.jpg"
+                   alt="Two professionals shaking hands across a glass conference table." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta">
+                <span>Business / Investor</span>
+                <span><strong>9 – 14 months</strong></span>
+              </div>
+              <h3>Business &amp; Investor Stream</h3>
+              <p>For founders, executives, and high-net-worth families. We map the right provincial program to your business, your capital, and the city you actually want to live in.</p>
+              <p class="program-price"><small>Engagement from</small>CAD&nbsp;$12,000</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Provincial program selection &amp; business plan</li>
+                <li><i class="fa-solid fa-check"></i>Net-worth verification and source-of-funds dossier</li>
+                <li><i class="fa-solid fa-check"></i>Performance-agreement monitoring post-landing</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Request an Assessment <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+          -->
+
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-family.jpg"
+                   alt="A family walking together in a Canadian park in late autumn." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta">
+                <span>Family Class</span>
+                <span><strong>10 – 18 months</strong></span>
+              </div>
+              <h3>Family Sponsorship</h3>
+              <p>Spouses, parents, grandparents, and dependent children. Sponsorship is paperwork-heavy and emotionally tender — we keep you informed at every IRCC milestone.</p>
+              <p class="program-price"><small>Engagement from</small>CAD&nbsp;$3,200</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Relationship-evidence dossier and statutory declarations</li>
+                <li><i class="fa-solid fa-check"></i>PGP lottery, super-visa, and outland application routing</li>
+                <li><i class="fa-solid fa-check"></i>Medical, biometrics, and interview preparation</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Request an Assessment <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         WHERE YOU'LL LAND (6 city cards)
+         ════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Where You'll Land</span>
+          <h2>Six Canadian cities our clients call home.</h2>
+          <p class="text-muted">Choosing a city is not a footnote to immigration — it shapes schooling, climate, community, and the cost of your first decade. We help you choose with eyes open.</p>
+        </div>
+
+        <div class="dest-grid">
+          <a class="dest-card animate-on-scroll" href="contact.html" aria-label="Toronto, Ontario">
+            <img src="assets/images/city-toronto.jpg" alt="The CN Tower above downtown Toronto at dusk." />
+            <div class="dest-body">
+              <span class="dest-kicker">Ontario</span>
+              <span class="dest-title">Toronto</span>
+              <span class="dest-meta">Finance, tech, and the country's most international workforce.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a class="dest-card animate-on-scroll" data-delay="100" href="contact.html" aria-label="Mississauga, Ontario">
+            <img src="assets/images/city-mississauga.jpg" alt="A Mississauga residential street with rows of family homes." />
+            <div class="dest-body">
+              <span class="dest-kicker">Ontario · GTA</span>
+              <span class="dest-title">Mississauga</span>
+              <span class="dest-meta">Family-first suburbs, established South-Asian and Arab communities.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a class="dest-card animate-on-scroll" data-delay="200" href="contact.html" aria-label="Vancouver, British Columbia">
+            <img src="assets/images/city-vancouver.jpg" alt="Vancouver skyline against the North Shore mountains." />
+            <div class="dest-body">
+              <span class="dest-kicker">British Columbia</span>
+              <span class="dest-title">Vancouver</span>
+              <span class="dest-meta">Pacific gateway, mild winters, and a thriving Asia-Pacific trade scene.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a class="dest-card animate-on-scroll" href="contact.html" aria-label="Calgary, Alberta">
+            <img src="assets/images/city-calgary.jpg" alt="Calgary's downtown towers with the Rocky Mountains in the distance." />
+            <div class="dest-body">
+              <span class="dest-kicker">Alberta</span>
+              <span class="dest-title">Calgary</span>
+              <span class="dest-meta">Energy capital, business-friendly tax regime, the Rockies on weekends.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a class="dest-card animate-on-scroll" data-delay="100" href="contact.html" aria-label="Ottawa, Ontario">
+            <img src="assets/images/city-ottawa.jpg" alt="Canada's Parliament buildings on the Ottawa River." />
+            <div class="dest-body">
+              <span class="dest-kicker">Ontario · Capital</span>
+              <span class="dest-title">Ottawa</span>
+              <span class="dest-meta">Bilingual, calm, and steady — civil-service jobs and excellent schools.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a class="dest-card animate-on-scroll" data-delay="200" href="contact.html" aria-label="Montreal, Quebec">
+            <img src="assets/images/city-montreal.jpg" alt="Cobblestone streets in Montreal's Old Port at evening." />
+            <div class="dest-body">
+              <span class="dest-kicker">Quebec</span>
+              <span class="dest-title">Montreal</span>
+              <span class="dest-meta">European character, cultural depth, francophone immigration pathways.</span>
+              <span class="dest-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         NEWSLETTER
+         ════════════════════════════════════════════════ -->
+    <section class="newsletter section-tight" aria-label="Newsletter signup">
+      <div class="container">
+        <div class="animate-on-scroll">
+          <span class="eyebrow">Stay Informed</span>
+          <h2>Policy changes, draw rounds, and market reads — once a month.</h2>
+          <p>Express Entry cut-offs shift. Trade tariffs change. We track the news that actually affects your file and send a single, well-edited briefing the first week of every month. Unsubscribe with one click.</p>
+        </div>
+        <div class="animate-on-scroll" data-delay="100">
+          <form class="newsletter-form" novalidate>
+            <label for="newsletterEmail" class="sr-only" style="position:absolute; left:-9999px;">Email</label>
+            <input id="newsletterEmail" type="email" name="email" placeholder="you@domain.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-fine">No marketing. No third-party sharing. Just the briefing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         FINAL CTA
+         ════════════════════════════════════════════════ -->
+    <section class="cta-final section">
+      <div class="container">
+        <span class="eyebrow animate-on-scroll" style="color: var(--color-accent-2);">Begin</span>
+        <h2 class="animate-on-scroll">Tell us what you're trying to do. We'll tell you honestly whether we can help.</h2>
+        <p class="animate-on-scroll" data-delay="100">A first conversation is free, confidential, and treated with the seriousness it deserves. Within one business day, you'll have a written assessment of your options.</p>
+        <div class="hero-actions animate-on-scroll" data-delay="200">
+          <a href="contact.html" class="btn btn-accent btn-lg">Request a Free Assessment <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+14165092198" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> (416) 509-2198</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services">
+            <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="ftrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+              <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+              <g clip-path="url(#ftrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+                <line x1="6" y1="30" x2="50" y2="30"/>
+                <ellipse cx="28" cy="30" rx="22" ry="8"/>
+                <ellipse cx="28" cy="30" rx="22" ry="15"/>
+                <line x1="28" y1="8" x2="28" y2="52"/>
+                <ellipse cx="28" cy="30" rx="10" ry="22"/>
+                <ellipse cx="28" cy="30" rx="18" ry="22"/>
               </g>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
-              </g>
-              <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4"/>
-              <circle cx="30" cy="31" r="8" fill="#15243B"/>
-              <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
-              <g transform="translate(30,31) scale(0.155)">
+              <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+              <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+              <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+              <g transform="translate(44 46) scale(0.22)">
                 <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
               </g>
             </svg>
+            <span class="brand-text">
+              <span class="brand-name">AFB Trade</span>
+              <span class="brand-tag">&amp; Services Inc.</span>
+            </span>
+          </a>
+          <p>A Canadian consultancy bridging North America and the Arabian Gulf — immigration, international trade, and real-estate services delivered with honesty and care.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
-          <div class="afb-logo-text">
-            <span class="afb-logo-monogram">AFB</span>
-            <span class="afb-logo-tagname">Trade &amp; Services</span>
-          </div>
-        </a>
+        </div>
 
-        <!-- DESKTOP NAV -->
-        <nav class="afb-nav">
-          <a href="index.html" class="active">Home</a>
-          <a href="about.html" >About Us</a>
-          <a href="immigration.html" >Immigration</a>
-          <a href="trading.html" >Trading &amp; Export</a>
-          <a href="real-estate.html" >Real Estate</a>
-          <a href="contact.html" >Contact</a>
-        </nav>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="immigration.html">Immigration</a></li>
+            <li><a href="trading.html">Trading &amp; Export</a></li>
+            <li><a href="real-estate.html">Real Estate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-        <!-- LOGIN BUTTON -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="immigration.html">Express Entry</a></li>
+            <li><a href="immigration.html">Business Investor</a></li>
+            <li><a href="immigration.html">Family Sponsorship</a></li>
+            <li><a href="immigration.html">Study Permits</a></li>
+            <li><a href="trading.html">Import / Export</a></li>
+            <li><a href="real-estate.html">Property Management</a></li>
+          </ul>
+        </div>
 
-        <!-- HAMBURGER (mobile) -->
-        <button class="afb-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Greater Toronto Area<br />Ontario, Canada</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+14165092198">(416) 509-2198</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@afbtrade.ca">info@afbtrade.ca</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <a href="https://afbtrade.ca">afbtrade.ca</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="afb-header-rule"></div>
-      <!-- MOBILE NAV DRAWER -->
-      <nav class="afb-mobile-nav" id="mobileNav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html" >About Us</a>
-        <a href="immigration.html" >Immigration</a>
-        <a href="trading.html" >Trading &amp; Export</a>
-        <a href="real-estate.html" >Real Estate</a>
-        <a href="contact.html" >Contact</a>
-      </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-subtitle">Your Ultimate Immigration & Trade Solution</span>
-                <h1>Expanding Horizons Across Canada & The Gulf</h1>
-                <p>An honest, sincere, and highly professional approach to your migration, trading, and real estate needs. Trust our global expertise to guide you to success.</p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-accent">Get a Free Evaluation</a>
-                    <a href="#services" class="btn btn-outline">Explore Our Services</a>
-                </div>
-            </div>
-            
-            <!-- 3D INTERACTIVE LOGO -->
-            <div class="hero-visual" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
-                <div class="logo-3d-wrapper">
-                    <div class="logo-3d-glow"></div>
-                    <svg width="350" height="350" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" class="logo-3d-svg">
-                        <defs><clipPath id="globeClip3d"><circle cx="19" cy="20" r="16"/></clipPath></defs>
-                        <circle cx="19" cy="20" r="16" fill="#1A2E4A" class="layer layer-base"/>
-                        <g clip-path="url(#globeClip3d)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7" class="layer layer-grid">
-                            <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
-                            <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
-                        </g>
-                        <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4" class="layer layer-ring"/>
-                        
-                        <g class="layer layer-leaf">
-                            <circle cx="30" cy="31" r="8" fill="#15243B"/>
-                            <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
-                            <g transform="translate(30,31) scale(0.155)">
-                                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Guarantee Banner -->
-    <div class="guarantee-banner animate-on-scroll">
-        <div class="container">
-            <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1rem;"></i>
-            <h2>No Success, No Fee*</h2>
-            <p>Our commitment to you: We only succeed when you do. Professionalism backed by a guarantee.</p>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> AFB Trade &amp; Services Inc. All rights reserved.</p>
+        <p>Registered in Ontario · No&nbsp;Success&nbsp;–&nbsp;No&nbsp;Fee* terms apply to qualifying engagements.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Company Introduction -->
-    <section class="section glass-section">
-        <div class="glass-shape-1"></div>
-        <div class="glass-shape-2"></div>
-        <div class="container relative" style="z-index: 1;">
-            <div class="section-title animate-on-scroll">
-                <h2>Welcome to AFB Trade & Services Inc.</h2>
-            </div>
-            <div class="glass-card text-center animate-on-scroll" style="max-width: 900px; margin: 0 auto;">
-                <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--color-accent) !important; margin-bottom: 1.5rem;">
-                    AFB Trade & Services Inc. is a leading incorporated Canadian company specializing in Professional Immigration Consultancy, International Trade, and Real Estate. 
-                </p>
-                <p style="font-size: 1.05rem; line-height: 1.8;">
-                    With strong roots in the Middle East and North America, we bridge the gap for professionals, businesses, and investors. From securing your Canadian dream to facilitating massive import/export operations, our experienced team provides end-to-end solutions.
-                </p>
-                <a href="about.html" class="btn btn-accent" style="margin-top: 1.5rem; font-weight: 600;">Learn More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section glass-section" id="services" style="background: linear-gradient(135deg, #0a192f 0%, #112240 100%);">
-        <div class="glass-shape-2" style="top: -100px; left: -100px; bottom: auto; right: auto;"></div>
-        <div class="glass-shape-1" style="bottom: -150px; right: -150px; top: auto; left: auto;"></div>
-        
-        <div class="container relative" style="z-index: 1;">
-            <div class="section-title animate-on-scroll">
-                <h2>Our Premium Services</h2>
-            </div>
-            
-            <div class="services-grid">
-                <!-- Immigration Service -->
-                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <i class="fa-solid fa-passport service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
-                        <h3>Immigration & Visas</h3>
-                        <p style="margin-bottom: 2rem;">Comprehensive Canadian immigration consultancy. Skilled Workers, Business Investors, Students, and Family Sponsorships.</p>
-                    </div>
-                    <a href="immigration.html" class="btn btn-outline" style="width: 100%;">Read More</a>
-                </div>
-                
-                <!-- Trading Service -->
-                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <i class="fa-solid fa-ship service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
-                        <h3>Trading & Export</h3>
-                        <p style="margin-bottom: 2rem;">Facilitating international trade between North America, Europe, and the Middle East. Specialized in commodities, electronics, and wholesale.</p>
-                    </div>
-                    <a href="trading.html" class="btn btn-outline" style="width: 100%;">Read More</a>
-                </div>
-                
-                <!-- Real Estate -->
-                <div class="glass-card animate-on-scroll text-center" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <i class="fa-solid fa-building service-icon" style="color: var(--color-accent); font-size: 3.5rem;"></i>
-                        <h3>Real Estate</h3>
-                        <p style="margin-bottom: 2rem;">Premium real estate services for newcomers and investors in Canada. Buying, selling, leasing, and property management.</p>
-                    </div>
-                    <a href="real-estate.html" class="btn btn-outline" style="width: 100%;">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" style="display: none;">
-        <div class="testimonials-bg-shape"></div>
-        <div class="testimonials-bg-shape-2"></div>
-        <div class="container relative" style="z-index: 2;">
-            <div class="section-title animate-on-scroll">
-                <h2 style="color: var(--color-white);">Client Success Stories</h2>
-                <p style="color: var(--color-accent);">Don't just take our word for it.</p>
-            </div>
-            
-            <div class="testimonial-carousel entrance-anim">
-                
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
-                    <p class="testimonial-content">
-                        "AFB Trade completely delivered on their 'No Success, No Fee' guarantee. The immigration experts secured my skilled worker visa in record time, and their settlement services made finding a home in the Greater Toronto Area effortless."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Mohammed A.</h4>
-                            <p>Skilled Worker Migrant, UAE</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
-                    <p class="testimonial-content">
-                        "Expanding our import operations to North America seemed daunting until we partnered with AFB. Their global trading network and professional sincerity bridged the gap instantly. They are a prime business partner."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Sarah L.</h4>
-                            <p>Import/Export Director, UK</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
-                    <p class="testimonial-content">
-                        "As a commercial investor, finding the right property in Canada was critical. The AFB real estate division provided analytical tools and market insight that secured an incredible plaza for my portfolio."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">F</div>
-                        <div class="author-info">
-                            <h4>Fahad T.</h4>
-                            <p>Real Estate Investor, Qatar</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
-                    <p class="testimonial-content">
-                        "Highly professional and rigorously honest. Unlike other consultancies, AFB truly cared about my family's transition to Ontario. Their guidance on community integration and finding schools was invaluable."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
-                        <div class="author-info">
-                            <h4>Jasmine P.</h4>
-                            <p>Family Sponsorship, India</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="section section-dark text-center" style="text-align: center;">
-        <div class="container animate-on-scroll">
-            <h2>Ready to Start Your Journey?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Contact our experts today for a confidential consultation of your business, immigration, or real estate needs.</p>
-            <a href="contact.html" class="btn btn-accent text-dark">Contact Us Today</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="max-width: 300px;">
-                    <h4><i class="fa-solid fa-earth-americas" style="color: var(--color-accent);"></i> AFB Trade & Services</h4>
-                    <p>Canada's premier agency connecting North America and the Arabian Gulf with professional consultancy.</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="immigration.html">Immigration Services</a></li>
-                        <li><a href="trading.html">Trading & Export</a></li>
-                        <li><a href="real-estate.html">Real Estate</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Greater Toronto Area, Canada</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <span>(416) 844-3528</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>info@afbtrade.ca</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 AFB Trade & Services Inc. All rights reserved. | No Success, No Fee Guarantee terms apply.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Main Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

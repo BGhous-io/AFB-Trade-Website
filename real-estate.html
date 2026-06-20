@@ -1,159 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate | AFB Trade & Services Inc.</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate — AFB Trade &amp; Services Inc.</title>
+  <meta name="description" content="Canadian real-estate services for newcomers, investors, and commercial owners. Residential purchases, commercial portfolios, property management, and market intelligence across the GTA." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-
-    <!-- ══════════════════════════════════════
-       AFB HEADER
-       ══════════════════════════════════════ -->
-    <header>
-      <div class="afb-header">
-        <!-- LOGO -->
-        <a href="index.html" class="afb-logo">
-          <div class="afb-logo-icon">
-            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-              <defs><clipPath id="globeClip"><circle cx="19" cy="20" r="16"/></clipPath></defs>
-              <circle cx="19" cy="20" r="16" fill="#1A2E4A"/>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
-              </g>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
-              </g>
-              <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4"/>
-              <circle cx="30" cy="31" r="8" fill="#15243B"/>
-              <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
-              <g transform="translate(30,31) scale(0.155)">
-                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
-              </g>
-            </svg>
-          </div>
-          <div class="afb-logo-text">
-            <span class="afb-logo-monogram">AFB</span>
-            <span class="afb-logo-tagname">Trade &amp; Services</span>
-          </div>
-        </a>
-
-        <!-- DESKTOP NAV -->
-        <nav class="afb-nav">
-          <a href="index.html" >Home</a>
-          <a href="about.html" >About Us</a>
-          <a href="immigration.html" >Immigration</a>
-          <a href="trading.html" >Trading &amp; Export</a>
-          <a href="real-estate.html" class="active">Real Estate</a>
-          <a href="contact.html" >Contact</a>
-        </nav>
-
-        <!-- LOGIN BUTTON -->
-
-        <!-- HAMBURGER (mobile) -->
-        <button class="afb-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div class="afb-header-rule"></div>
-      <!-- MOBILE NAV DRAWER -->
-      <nav class="afb-mobile-nav" id="mobileNav">
-        <a href="index.html" >Home</a>
-        <a href="about.html" >About Us</a>
-        <a href="immigration.html" >Immigration</a>
-        <a href="trading.html" >Trading &amp; Export</a>
+  <header class="site-header on-dark-hero">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><clipPath id="hdrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+          <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+          <g clip-path="url(#hdrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+            <line x1="6" y1="30" x2="50" y2="30"/><ellipse cx="28" cy="30" rx="22" ry="8"/><ellipse cx="28" cy="30" rx="22" ry="15"/>
+            <line x1="28" y1="8" x2="28" y2="52"/><ellipse cx="28" cy="30" rx="10" ry="22"/><ellipse cx="28" cy="30" rx="18" ry="22"/>
+          </g>
+          <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+          <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+          <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+          <g transform="translate(44 46) scale(0.22)"><path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/></g>
+        </svg>
+        <span class="brand-text"><span class="brand-name">AFB Trade</span><span class="brand-tag">&amp; Services Inc.</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="immigration.html">Immigration</a>
+        <a href="trading.html">Trading &amp; Export</a>
         <a href="real-estate.html" class="active">Real Estate</a>
-        <a href="contact.html" >Contact</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-accent btn-sm">Free Evaluation</a>
       </nav>
-    </header>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+    </div>
+  </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container page-header-content animate-on-scroll">
-            <h1>Premium Real Estate</h1>
-            <p class="breadcrumb">Home / Real Estate Services</p>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="immigration.html">Immigration</a>
+    <a href="trading.html">Trading &amp; Export</a>
+    <a href="real-estate.html" class="active">Real Estate</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-meta">
+      <span><i class="fa-solid fa-location-dot"></i>Greater Toronto Area, Canada</span>
+      <span><i class="fa-solid fa-phone"></i><a href="tel:+14165092198" style="color:inherit;">(416) 509-2198</a></span>
+      <span><i class="fa-solid fa-envelope"></i><a href="mailto:info@afbtrade.ca" style="color:inherit;">info@afbtrade.ca</a></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header" aria-label="Real estate services">
+      <div class="hero-bg">
+        <img src="assets/images/hero-realestate.jpg" alt="A leafy Toronto residential street lined with detached homes." />
+      </div>
+      <div class="container">
+        <div class="page-header-inner">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Real Estate</span></nav>
+          <span class="eyebrow">Real Estate</span>
+          <h1>A home first. An asset second. Both done properly.</h1>
+          <p>From newcomer first-home purchases to multi-unit commercial portfolios, we read the market, understand the financing, and represent only one side of the transaction — yours.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="content-block animate-on-scroll text-center" style="text-align: center; max-width: 900px; margin: 0 auto 3rem;">
-                <i class="fa-solid fa-city" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
-                <h2>Securing Your Foundation in North America & The Gulf</h2>
-                <p class="lead">Whether you are an investor looking for commercial properties or a newcomer establishing your first home in Canada, our dedicated Real Estate division provides expert, trustworthy guidance to secure your ideal property.</p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Commercial Real Estate -->
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-building-user service-icon" style="color: var(--color-primary);"></i>
-                    <h3>Commercial Investment</h3>
-                    <p>Strategic acquisitions of commercial real estate including plazas, multi-family residential, and industrial properties in high-growth North American markets.</p>
-                </div>
-                
-                <!-- Residential Property -->
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-house-chimney service-icon" style="color: var(--color-primary);"></i>
-                    <h3>Residential Relocation</h3>
-                    <p>As part of our complete settlement services, we assist new immigrants in buying or leasing residential properties in top communities tailored to family needs.</p>
-                </div>
-
-                <!-- Property Management -->
-                <div class="service-card animate-on-scroll">
-                    <i class="fa-solid fa-id-badge service-icon" style="color: var(--color-primary);"></i>
-                    <h3>Property Management</h3>
-                    <p>Comprehensive property management solutions for overseas investors from the Arabian Gulf and Asia, ensuring your investments are protected and profitable.</p>
-                </div>
-            </div>
-
-            <div class="text-center animate-on-scroll" style="margin-top: 4rem;">
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Ready to explore real estate opportunities?</p>
-                <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
-            </div>
+    <!-- INTRO -->
+    <section class="section">
+      <div class="container">
+        <div class="two-col reverse">
+          <div class="animate-on-scroll">
+            <span class="eyebrow">The Practice</span>
+            <h2>A small brokerage with a long memory of the GTA.</h2>
+            <p class="lede">Real estate is the largest cheque most of our clients will ever write. We treat it accordingly — with the same evidence-based caution we bring to an immigration file or a trade contract.</p>
+            <p style="margin-top: 20px;">Our brokerage is licensed under the Real Estate Council of Ontario and operates primarily across the Greater Toronto Area — Toronto, Mississauga, Brampton, Markham, Vaughan, and Oakville — with selected commercial coverage in Ottawa, Hamilton, and Calgary.</p>
+            <p style="margin-top: 20px;">We do not list properties for the public. We work by referral and represent buyers, sellers, and landlords with whom we have an ongoing engagement letter. That model is deliberate — it lets us walk you away from a bad deal without worrying about a quarterly target.</p>
+          </div>
+          <div class="col-media animate-on-scroll" data-delay="100">
+            <img src="assets/images/media-homes.jpg" alt="A contemporary home interior in the Greater Toronto Area." />
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Footer Content -->
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="max-width: 300px;">
-                    <h4><i class="fa-solid fa-earth-americas" style="color: var(--color-accent);"></i> AFB Trade & Services</h4>
-                    <p>Canada's premier agency connecting North America and the Arabian Gulf with professional consultancy.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="immigration.html">Immigration Services</a></li>
-                        <li><a href="trading.html">Trading & Export</a></li>
-                        <li><a href="real-estate.html">Real Estate</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <ul class="footer-contact">
-                        <li><i class="fa-solid fa-location-dot"></i><span>Greater Toronto Area, Canada</span></li>
-                        <li><i class="fa-solid fa-phone"></i><span>(416) 844-3528</span></li>
-                        <li><i class="fa-solid fa-envelope"></i><span>info@afbtrade.ca</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AFB Trade & Services Inc. All rights reserved. | No Success, No Fee Guarantee terms apply.</p>
-            </div>
+    <!-- SERVICES TILES -->
+    <section class="section bg-cream-alt">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">What We Do</span>
+          <h2>Six engagement types across the practice.</h2>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+        <div class="service-tiles">
+          <article class="service-tile animate-on-scroll">
+            <div class="tile-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <h3>Newcomer Home Purchase</h3>
+            <p>Your first home in Canada. Neighbourhood selection, mortgage pre-approval (including non-resident programs), and offer strategy.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="100">
+            <div class="tile-icon"><i class="fa-solid fa-key"></i></div>
+            <h3>Resale &amp; Move-Up</h3>
+            <p>Selling your current home and trading up. Staging, pricing strategy, marketing, and chain-managed closings.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="200">
+            <div class="tile-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>Commercial &amp; Plaza</h3>
+            <p>Retail plazas, mixed-use buildings, and small-bay industrial. Underwriting, tenancy review, and capex modelling.</p>
+          </article>
+          <article class="service-tile animate-on-scroll">
+            <div class="tile-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Investment &amp; Portfolio</h3>
+            <p>Multi-unit residential and small-portfolio acquisitions. Cap-rate analysis, financing structuring, and exit planning.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="100">
+            <div class="tile-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <h3>Property Management</h3>
+            <p>Tenant placement, rent collection, maintenance coordination, and annual reporting. Fixed-fee or percentage models.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="200">
+            <div class="tile-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+            <h3>Leasing &amp; Tenancy</h3>
+            <p>Residential and commercial leasing. AGI applications, LTB representation, and lease renegotiation on owner instruction.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ENGAGEMENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Three Engagements</span>
+          <h2>What we run most often.</h2>
+        </div>
+
+        <div class="programs">
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-residential.jpg" alt="A welcoming front door of a Canadian family home." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Newcomer Purchase</span><span><strong>6 – 12 weeks</strong></span></div>
+              <h3>First Home in Canada</h3>
+              <p>Your first house, condo, or townhome after landing. We walk you through CMHC insurance, non-resident mortgage programs, the GTA's school catchments, and the property taxes nobody tells you about until closing.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Neighbourhood &amp; school-board orientation</li>
+                <li><i class="fa-solid fa-check"></i>Mortgage broker introductions (including for non-residents)</li>
+                <li><i class="fa-solid fa-check"></i>Offer strategy, conditions, and inspection management</li>
+                <li><i class="fa-solid fa-check"></i>Closing coordination with your lawyer and lender</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Start a Home Search <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-commercial.jpg" alt="A small retail plaza on a busy GTA arterial road." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Commercial Plaza</span><span><strong>3 – 6 months</strong></span></div>
+              <h3>Plaza &amp; Mixed-Use Acquisition</h3>
+              <p>Retail plazas, gas-station-with-convenience, and mixed-use buildings across the GTA and 905. Underwriting includes tenancy review, environmental risk, and a five-year capex projection — not just the rent roll.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Off-market sourcing and listed-property analysis</li>
+                <li><i class="fa-solid fa-check"></i>Lease abstract, T12, and stabilised NOI modelling</li>
+                <li><i class="fa-solid fa-check"></i>Phase I environmental and zoning verification</li>
+                <li><i class="fa-solid fa-check"></i>Debt arrangement with commercial lenders &amp; private MICs</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Discuss a Commercial Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-multiunit.jpg" alt="A small multi-unit residential apartment building in Toronto." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Multi-Unit Investment</span><span><strong>Retainer</strong></span></div>
+              <h3>Multi-Unit Residential Portfolio</h3>
+              <p>For investors building a small portfolio of 4–24-unit residential buildings. We source, underwrite, and (on request) manage. Honest about which submarkets we believe in and which we don't.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Submarket cap-rate benchmarking</li>
+                <li><i class="fa-solid fa-check"></i>Rent-stabilisation and AGI feasibility review</li>
+                <li><i class="fa-solid fa-check"></i>Portfolio cash-flow and refinance modelling</li>
+                <li><i class="fa-solid fa-check"></i>Optional in-house property management post-close</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Discuss an Investment Mandate <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREAS COVERED  (uses dest-card vocabulary) -->
+    <section class="section bg-cream-alt">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Areas Covered</span>
+          <h2>Where we know the streets, not just the postal codes.</h2>
+        </div>
+        <div class="dest-grid">
+          <a class="dest-card animate-on-scroll" href="contact.html">
+            <img src="assets/images/dest-toronto.jpg" alt="Toronto downtown condo towers." />
+            <div class="dest-body"><span class="dest-kicker">Core · Condo</span><span class="dest-title">Toronto</span><span class="dest-meta">Yonge corridor, Liberty Village, Leslieville, the Annex.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+          <a class="dest-card animate-on-scroll" data-delay="100" href="contact.html">
+            <img src="assets/images/dest-mississauga.jpg" alt="A Mississauga residential street." />
+            <div class="dest-body"><span class="dest-kicker">905 · Family</span><span class="dest-title">Mississauga</span><span class="dest-meta">Streetsville, Erin Mills, Meadowvale, City Centre.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+          <a class="dest-card animate-on-scroll" data-delay="200" href="contact.html">
+            <img src="assets/images/dest-brampton.jpg" alt="A Brampton subdivision viewed from above." />
+            <div class="dest-body"><span class="dest-kicker">905 · Detached</span><span class="dest-title">Brampton</span><span class="dest-meta">Mount Pleasant, Springdale, and the new-build North.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+          <a class="dest-card animate-on-scroll" href="contact.html">
+            <img src="assets/images/dest-vaughan.jpg" alt="A new-build community in Vaughan, Ontario." />
+            <div class="dest-body"><span class="dest-kicker">York · Premium</span><span class="dest-title">Vaughan</span><span class="dest-meta">Maple, Kleinburg, Thornhill — schools and resale strength.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+          <a class="dest-card animate-on-scroll" data-delay="100" href="contact.html">
+            <img src="assets/images/dest-markham.jpg" alt="A modern Markham home with mature trees." />
+            <div class="dest-body"><span class="dest-kicker">York · Tech Belt</span><span class="dest-title">Markham</span><span class="dest-meta">Cathedraltown, Unionville, and the 404/407 employment band.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+          <a class="dest-card animate-on-scroll" data-delay="200" href="contact.html">
+            <img src="assets/images/dest-oakville.jpg" alt="An Oakville lakefront residence." />
+            <div class="dest-body"><span class="dest-kicker">Halton · Established</span><span class="dest-title">Oakville</span><span class="dest-meta">Bronte, Glen Abbey, and Old Oakville lakefront.</span><span class="dest-cta">Discuss <i class="fa-solid fa-arrow-right"></i></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">How We Work</span>
+          <h2>From first showing to closing day.</h2>
+        </div>
+        <div class="steps">
+          <article class="step animate-on-scroll"><i class="fa-solid fa-comments"></i><h4>Brief</h4><p>What you want, what you can spend, and what you actually need. We separate the three honestly before we show you anything.</p></article>
+          <article class="step animate-on-scroll" data-delay="100"><i class="fa-solid fa-magnifying-glass-location"></i><h4>Search</h4><p>Listed properties, off-market introductions, and a written shortlist with our underwriting attached — not a flood of MLS links.</p></article>
+          <article class="step animate-on-scroll" data-delay="200"><i class="fa-solid fa-pen-nib"></i><h4>Offer</h4><p>Offer structuring, conditions, inspection, and price discipline. We will tell you when to walk away — and most clients listen.</p></article>
+          <article class="step animate-on-scroll" data-delay="300"><i class="fa-solid fa-handshake"></i><h4>Close &amp; Beyond</h4><p>Closing coordination with your lawyer and lender, key handover, and (on request) property management from day one.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final section">
+      <div class="container">
+        <span class="eyebrow animate-on-scroll" style="color: var(--color-accent-2);">Begin</span>
+        <h2 class="animate-on-scroll">Talk to a broker who'll tell you not to buy something.</h2>
+        <p class="animate-on-scroll" data-delay="100">A first conversation is free, confidential, and gives you a written read on what your budget actually buys in today's GTA market.</p>
+        <div class="hero-actions animate-on-scroll" data-delay="200">
+          <a href="contact.html" class="btn btn-accent btn-lg">Request a Property Brief <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+14165092198" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> (416) 509-2198</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services">
+            <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="ftrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+              <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+              <g clip-path="url(#ftrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+                <line x1="6" y1="30" x2="50" y2="30"/><ellipse cx="28" cy="30" rx="22" ry="8"/><ellipse cx="28" cy="30" rx="22" ry="15"/>
+                <line x1="28" y1="8" x2="28" y2="52"/><ellipse cx="28" cy="30" rx="10" ry="22"/><ellipse cx="28" cy="30" rx="18" ry="22"/>
+              </g>
+              <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+              <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+              <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+              <g transform="translate(44 46) scale(0.22)"><path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/></g>
+            </svg>
+            <span class="brand-text"><span class="brand-name">AFB Trade</span><span class="brand-tag">&amp; Services Inc.</span></span>
+          </a>
+          <p>A Canadian consultancy bridging North America and the Arabian Gulf — immigration, international trade, and real-estate services delivered with honesty and care.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="immigration.html">Immigration</a></li><li><a href="trading.html">Trading &amp; Export</a></li><li><a href="real-estate.html">Real Estate</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="immigration.html">Express Entry</a></li><li><a href="immigration.html">Business Investor</a></li><li><a href="immigration.html">Family Sponsorship</a></li><li><a href="immigration.html">Study Permits</a></li><li><a href="trading.html">Import / Export</a></li><li><a href="real-estate.html">Property Management</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><i class="fa-solid fa-location-dot"></i><span>Greater Toronto Area<br />Ontario, Canada</span></li><li><i class="fa-solid fa-phone"></i><a href="tel:+14165092198">(416) 509-2198</a></li><li><i class="fa-solid fa-envelope"></i><a href="mailto:info@afbtrade.ca">info@afbtrade.ca</a></li><li><i class="fa-solid fa-globe"></i><a href="https://afbtrade.ca">afbtrade.ca</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> AFB Trade &amp; Services Inc. All rights reserved.</p>
+        <p>Registered in Ontario · No&nbsp;Success&nbsp;–&nbsp;No&nbsp;Fee* terms apply to qualifying engagements.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

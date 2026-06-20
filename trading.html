@@ -1,157 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading & Export | AFB Trade & Services Inc.</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading &amp; Export — AFB Trade &amp; Services Inc.</title>
+  <meta name="description" content="International trade between North America, Europe, and the Arabian Gulf. Sourcing, contracting, freight forwarding, and customs clearance for commodities, electronics, and wholesale goods." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-
-    <!-- ══════════════════════════════════════
-       AFB HEADER
-       ══════════════════════════════════════ -->
-    <header>
-      <div class="afb-header">
-        <!-- LOGO -->
-        <a href="index.html" class="afb-logo">
-          <div class="afb-logo-icon">
-            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-              <defs><clipPath id="globeClip"><circle cx="19" cy="20" r="16"/></clipPath></defs>
-              <circle cx="19" cy="20" r="16" fill="#1A2E4A"/>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="3" y1="20" x2="35" y2="20"/><ellipse cx="19" cy="20" rx="16" ry="5.5"/><ellipse cx="19" cy="20" rx="16" ry="11"/>
-              </g>
-              <g clip-path="url(#globeClip)" fill="none" stroke="#C9962A" stroke-width="0.7" opacity="0.7">
-                <line x1="19" y1="4" x2="19" y2="36"/><ellipse cx="19" cy="20" rx="7" ry="16"/><ellipse cx="19" cy="20" rx="13" ry="16"/>
-              </g>
-              <circle cx="19" cy="20" r="16" fill="none" stroke="#C9962A" stroke-width="1.4"/>
-              <circle cx="30" cy="31" r="8" fill="#15243B"/>
-              <circle cx="30" cy="31" r="8" fill="none" stroke="#C9962A" stroke-width="1.2"/>
-              <g transform="translate(30,31) scale(0.155)">
-                <path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/>
-              </g>
-            </svg>
-          </div>
-          <div class="afb-logo-text">
-            <span class="afb-logo-monogram">AFB</span>
-            <span class="afb-logo-tagname">Trade &amp; Services</span>
-          </div>
-        </a>
-
-        <!-- DESKTOP NAV -->
-        <nav class="afb-nav">
-          <a href="index.html" >Home</a>
-          <a href="about.html" >About Us</a>
-          <a href="immigration.html" >Immigration</a>
-          <a href="trading.html" class="active">Trading &amp; Export</a>
-          <a href="real-estate.html" >Real Estate</a>
-          <a href="contact.html" >Contact</a>
-        </nav>
-
-        <!-- LOGIN BUTTON -->
-
-        <!-- HAMBURGER (mobile) -->
-        <button class="afb-hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div class="afb-header-rule"></div>
-      <!-- MOBILE NAV DRAWER -->
-      <nav class="afb-mobile-nav" id="mobileNav">
-        <a href="index.html" >Home</a>
-        <a href="about.html" >About Us</a>
-        <a href="immigration.html" >Immigration</a>
+  <header class="site-header on-dark-hero">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><clipPath id="hdrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+          <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+          <g clip-path="url(#hdrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+            <line x1="6" y1="30" x2="50" y2="30"/><ellipse cx="28" cy="30" rx="22" ry="8"/><ellipse cx="28" cy="30" rx="22" ry="15"/>
+            <line x1="28" y1="8" x2="28" y2="52"/><ellipse cx="28" cy="30" rx="10" ry="22"/><ellipse cx="28" cy="30" rx="18" ry="22"/>
+          </g>
+          <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+          <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+          <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+          <g transform="translate(44 46) scale(0.22)"><path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/></g>
+        </svg>
+        <span class="brand-text"><span class="brand-name">AFB Trade</span><span class="brand-tag">&amp; Services Inc.</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="immigration.html">Immigration</a>
         <a href="trading.html" class="active">Trading &amp; Export</a>
-        <a href="real-estate.html" >Real Estate</a>
-        <a href="contact.html" >Contact</a>
+        <a href="real-estate.html">Real Estate</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-accent btn-sm">Free Evaluation</a>
       </nav>
-    </header>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+    </div>
+  </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container page-header-content animate-on-scroll">
-            <h1>Trading & Export</h1>
-            <p class="breadcrumb">Home / Trading & Export</p>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="immigration.html">Immigration</a>
+    <a href="trading.html" class="active">Trading &amp; Export</a>
+    <a href="real-estate.html">Real Estate</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-meta">
+      <span><i class="fa-solid fa-location-dot"></i>Greater Toronto Area, Canada</span>
+      <span><i class="fa-solid fa-phone"></i><a href="tel:+14165092198" style="color:inherit;">(416) 509-2198</a></span>
+      <span><i class="fa-solid fa-envelope"></i><a href="mailto:info@afbtrade.ca" style="color:inherit;">info@afbtrade.ca</a></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header" aria-label="Trading and export services">
+      <div class="hero-bg">
+        <img src="assets/images/hero-trading.jpg" alt="A container ship leaving an international port at sunset." />
+      </div>
+      <div class="container">
+        <div class="page-header-inner">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Trading &amp; Export</span></nav>
+          <span class="eyebrow">International Trade</span>
+          <h1>Moving goods between North America, Europe, and the Gulf.</h1>
+          <p>Sourcing, contracting, freight forwarding, and customs — handled by a small team that has done this for two decades and answers in the same time zone as your buyer.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="content-block animate-on-scroll">
-                <h2>Vision Inspires Performance & Commitment</h2>
-                <p>
-                    AFB Trade & Services Inc. is a registered and true 100% Canadian incorporated organization with corporate office in the Greater Toronto Area, Canada. It was setup on the conviction to offer excellent range of services in relation to the immigration, trading and consultancy services. AFB is a company of global dimension one of its kind with its network of operations in North America, Asia and the Arabian Gulf from where it derived its name AFB.
-                </p>
-            </div>
-
-            <div class="content-block animate-on-scroll">
-                <h2>Our Trading & Export Services</h2>
-                <p>
-                    We are a full service organization work in the area of trading, Imports, Exports and immigration consultancy engaged across North America and the Arabian Gulf committed to provide excellent services of mutual concerns.
-                </p>
-                <p>
-                    Our Vision has been to be among the best companies in the world. In future our company will have to compete with numerous top class firms, both domestically and internationally, our intention then is to ensure our prosperity by joining the rank of these companies, competing with them and building strategic partnership with them in the market around the world. We strive to provide quality - and cost - effective services. 
-                </p>
-                <p>
-                    To be first choice company for customers in a wide range of area. To improve the quality and added value of our services through continuous and cost effective innovation. To conduct our business ethically and legally and to be responsible neighbors in the communities in which we operate. To earn profits that will ensure regular growth and provide the cash flow needed to implement our business strategies.
-                </p>
-            </div>
-
-            <div class="content-block animate-on-scroll">
-                <h2>Global Operations</h2>
-                <p>
-                    With headquarters in Toronto - Canada and offices in the Gulf, the company has been equipped with the professionals who posses vast experience in their related fields to provide high quality of services that is why our performance has been exceptionally high. We are supported by well behaved personnel. Hundreds of clients have trusted us since our company's moto is honesty, sincerity and professionalism. Our professionals have come from various segments of the business community bringing with them vast experiences.
-                </p>
-                <p>
-                    We have been also engaged with the trading business having assisted various potential exporters and importers from Asia and North America. Our company's primary interest is to help businessmen and individuals to understand the immigration and trading processes. With over a decade of successful operations across the Globe, AFB Trade & Services Inc., today commands an invincible position in relation to Immigration and Trading Services.
-                </p>
-            </div>
-            
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="contact.html" class="btn btn-primary">Partner With Us</a>
-            </div>
+    <!-- INTRO TWO-COL -->
+    <section class="section">
+      <div class="container">
+        <div class="two-col">
+          <div class="animate-on-scroll">
+            <span class="eyebrow">The Practice</span>
+            <h2>End-to-end trade, run by people who have shipped before.</h2>
+            <p class="lede">We are not a marketplace, a broker network, or a software platform. We are a small trade desk that takes responsibility for moving a container from the factory floor to your warehouse — and for everything that has to be true along the way.</p>
+            <p style="margin-top: 20px;">Our clients typically come to us when their existing arrangement has failed: a supplier that ghosted, a customs file that stalled, or a contract that didn't survive contact with reality. We rebuild those relationships and run the operation properly — letters of credit, Incoterms that mean what you think they mean, and freight options priced honestly.</p>
+            <p style="margin-top: 20px;">We operate primarily between Canadian and U.S. ports (Toronto, Montreal, Vancouver, Long Beach), the GCC (Jebel Ali, Hamad, Dammam), and selected European hubs (Rotterdam, Antwerp, Felixstowe).</p>
+          </div>
+          <div class="col-media animate-on-scroll" data-delay="100">
+            <img src="assets/images/media-logistics.jpg" alt="A warehouse aisle stacked with palletised goods ready for export." />
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="max-width: 300px;">
-                    <h4><i class="fa-solid fa-earth-americas" style="color: var(--color-accent);"></i> AFB Trade & Services</h4>
-                    <p>Canada's premier agency connecting North America and the Arabian Gulf with professional consultancy.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="immigration.html">Immigration Services</a></li>
-                        <li><a href="trading.html">Trading & Export</a></li>
-                        <li><a href="real-estate.html">Real Estate</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <ul class="footer-contact">
-                        <li><i class="fa-solid fa-location-dot"></i><span>Greater Toronto Area, Canada</span></li>
-                        <li><i class="fa-solid fa-phone"></i><span>(416) 844-3528</span></li>
-                        <li><i class="fa-solid fa-envelope"></i><span>info@afbtrade.ca</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AFB Trade & Services Inc. All rights reserved. | No Success, No Fee Guarantee terms apply.</p>
-            </div>
+    <!-- SECTORS -->
+    <section class="section bg-cream-alt">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Sectors</span>
+          <h2>Six categories of goods we move regularly.</h2>
+          <p class="text-muted">We focus where we have buyer and seller relationships on both ends. If your category is not here, ask — we may know someone who can.</p>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+
+        <div class="service-tiles">
+          <article class="service-tile animate-on-scroll">
+            <div class="tile-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Electronics &amp; Components</h3>
+            <p>Consumer electronics, IT hardware, and electronic components between North-American distributors and GCC retailers and re-exporters.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="100">
+            <div class="tile-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h3>Agricultural Commodities</h3>
+            <p>Canadian pulses, grains, and oilseeds into Gulf and South-Asian buyers. Container and bulk vessel programs supported.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="200">
+            <div class="tile-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Industrial Equipment</h3>
+            <p>Used and new heavy equipment, generators, and industrial spares. End-user verification and re-export documentation included.</p>
+          </article>
+          <article class="service-tile animate-on-scroll">
+            <div class="tile-icon"><i class="fa-solid fa-shirt"></i></div>
+            <h3>Textiles &amp; Apparel</h3>
+            <p>South-Asian textile manufacturers into Canadian and U.S. wholesale and private-label buyers. QC inspection on request.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="100">
+            <div class="tile-icon"><i class="fa-solid fa-bottle-water"></i></div>
+            <h3>Packaged Food &amp; FMCG</h3>
+            <p>Shelf-stable food, beverages, and FMCG. CFIA, FDA, and SFDA labelling and registration handled end-to-end.</p>
+          </article>
+          <article class="service-tile animate-on-scroll" data-delay="200">
+            <div class="tile-icon"><i class="fa-solid fa-car-side"></i></div>
+            <h3>Automotive &amp; Spare Parts</h3>
+            <p>Canadian and U.S. auto parts into Gulf and African markets. VIN-verified used vehicles for personal export on request.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES DEEP-DIVE (programs format) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Engagement Types</span>
+          <h2>Three ways to work with the trade desk.</h2>
+        </div>
+
+        <div class="programs">
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-sourcing.jpg" alt="A factory floor with a sourcing agent inspecting product samples." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Sourcing &amp; Procurement</span><span><strong>Project-based</strong></span></div>
+              <h3>We Find the Supplier</h3>
+              <p>You have the buyer; you need the goods. We identify, vet, and contract suppliers across Canada, the U.S., Pakistan, India, and the Gulf — with QC inspection, sample approval, and a fixed delivered price before you commit.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Supplier shortlist with verified company filings</li>
+                <li><i class="fa-solid fa-check"></i>Sample dispatch, lab testing, and pre-shipment inspection</li>
+                <li><i class="fa-solid fa-check"></i>Letter-of-credit or escrow structuring</li>
+                <li><i class="fa-solid fa-check"></i>Delivered-to-door pricing — no surprises at customs</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Discuss a Sourcing Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-tradedesk.jpg" alt="A trade-desk professional reviewing a shipping manifest at a port." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Export Representation</span><span><strong>Retainer · 6–24 months</strong></span></div>
+              <h3>We Find the Buyer</h3>
+              <p>You have the goods; you need a market. We represent Canadian and U.S. manufacturers into the GCC and South-Asian wholesale channel — distributor introductions, contracts, and ongoing account management on your behalf.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>Market-entry study and pricing benchmark</li>
+                <li><i class="fa-solid fa-check"></i>Distributor / agent shortlist with reference checks</li>
+                <li><i class="fa-solid fa-check"></i>Contract negotiation under Canadian or English law</li>
+                <li><i class="fa-solid fa-check"></i>Quarterly account reviews and collections support</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Discuss Export Representation <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="program-card animate-on-scroll">
+            <div class="program-media">
+              <img src="assets/images/prog-customs.jpg" alt="Customs paperwork being processed at a freight forwarder's office." />
+            </div>
+            <div class="program-body">
+              <div class="program-meta"><span>Freight &amp; Customs</span><span><strong>Per-shipment</strong></span></div>
+              <h3>We Run the Shipment</h3>
+              <p>You have the deal; you need it landed. Ocean and air freight booking, customs clearance at origin and destination, certificates of origin, and CARM-ready import declarations into Canada.</p>
+              <ul class="bullets">
+                <li><i class="fa-solid fa-check"></i>FCL, LCL, and air-freight rate negotiation</li>
+                <li><i class="fa-solid fa-check"></i>HS-code classification and duty-recovery review</li>
+                <li><i class="fa-solid fa-check"></i>CARM (Canada) and ACE (U.S.) import filings</li>
+                <li><i class="fa-solid fa-check"></i>Cargo insurance and dispute handling</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline-dark">Request a Freight Quote <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADE LANES STATS -->
+    <section class="section section-tight bg-dark">
+      <div class="container">
+        <div class="section-title text-center animate-on-scroll" style="margin-bottom: 32px;">
+          <span class="eyebrow" style="justify-content:center;">Trade Lanes</span>
+          <h2 style="color: var(--color-white);">Where the boxes actually go.</h2>
+        </div>
+        <div class="stats">
+          <div class="stat animate-on-scroll"><div class="stat-num"><span data-count="38">0</span></div><div class="stat-label">Active Lanes</div></div>
+          <div class="stat animate-on-scroll" data-delay="100"><div class="stat-num"><span data-count="11">0</span></div><div class="stat-label">Partner Ports</div></div>
+          <div class="stat animate-on-scroll" data-delay="200"><div class="stat-num"><span data-count="640">0</span><small>+</small></div><div class="stat-label">Shipments / Year</div></div>
+          <div class="stat animate-on-scroll" data-delay="300"><div class="stat-num"><span data-count="99.2" data-decimals="1">0</span><small>%</small></div><div class="stat-label">On-Time Delivery</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">How We Work</span>
+          <h2>From RFQ to receipt, in four phases.</h2>
+        </div>
+        <div class="steps">
+          <article class="step animate-on-scroll"><i class="fa-solid fa-clipboard-list"></i><h4>Brief</h4><p>You describe the goods, the volumes, and the destination. We quote a delivered price and a realistic timeline within five working days.</p></article>
+          <article class="step animate-on-scroll" data-delay="100"><i class="fa-solid fa-file-contract"></i><h4>Contract</h4><p>We agree commercial terms — Incoterms, payment instrument, QC standard, and the named individuals responsible at each stage.</p></article>
+          <article class="step animate-on-scroll" data-delay="200"><i class="fa-solid fa-truck-fast"></i><h4>Execute</h4><p>Production, inspection, booking, and customs filings. Daily status updates while goods are in motion; no news only when there is none.</p></article>
+          <article class="step animate-on-scroll" data-delay="300"><i class="fa-solid fa-warehouse"></i><h4>Land &amp; Reconcile</h4><p>Receipt confirmed, documents archived, duty drawback claimed where available. Post-shipment review on every engagement.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-cream-alt">
+      <div class="container container-narrow">
+        <div class="section-title animate-on-scroll">
+          <span class="eyebrow">Trade Desk FAQ</span>
+          <h2>Common questions on the first call.</h2>
+        </div>
+        <div class="faq-list animate-on-scroll">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span>What is your minimum order?</span><span class="faq-toggle"><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>For new clients we generally take projects of one full container (FCL) or above, or LCL consolidations with a delivered value of CAD&nbsp;$25,000+. Smaller projects are considered case by case when there is a path to scale.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span>How are you paid?</span><span class="faq-toggle"><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>For sourcing and freight, we quote a delivered-to-door price with our margin transparently disclosed. For export representation, we work on a monthly retainer plus performance commission. Either model is set out in writing before work begins.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span>Can you handle restricted or dual-use goods?</span><span class="faq-toggle"><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>We do not handle weapons, defence equipment, or items subject to Canadian Controlled Goods or U.S. ITAR regulation. We do handle dual-use items where appropriate end-use certificates and Global Affairs permits can be obtained.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span>Do you work with new exporters?</span><span class="faq-toggle"><i class="fa-solid fa-plus"></i></span></button>
+            <div class="faq-a"><div class="faq-a-inner"><p>Yes. First-time exporters are often our most rewarding clients. We will walk you through Incoterms, payment instruments, documentation, and the realities of the lane before you commit capital — and we will tell you honestly if your unit economics don't work.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final section">
+      <div class="container">
+        <span class="eyebrow animate-on-scroll" style="color: var(--color-accent-2);">Begin</span>
+        <h2 class="animate-on-scroll">Tell us what you're moving. We'll quote it honestly.</h2>
+        <p class="animate-on-scroll" data-delay="100">Send the goods description, volumes, origin and destination ports. You'll have a written delivered-price indication and timeline within five working days.</p>
+        <div class="hero-actions animate-on-scroll" data-delay="200">
+          <a href="contact.html" class="btn btn-accent btn-lg">Request a Trade Quote <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+14165092198" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> (416) 509-2198</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a class="brand" href="index.html" aria-label="AFB Trade &amp; Services">
+            <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><clipPath id="ftrGlobe"><circle cx="28" cy="30" r="22"/></clipPath></defs>
+              <circle cx="28" cy="30" r="22" fill="#0E3B43"/>
+              <g clip-path="url(#ftrGlobe)" fill="none" stroke="#C9962A" stroke-width="1" opacity="0.7">
+                <line x1="6" y1="30" x2="50" y2="30"/><ellipse cx="28" cy="30" rx="22" ry="8"/><ellipse cx="28" cy="30" rx="22" ry="15"/>
+                <line x1="28" y1="8" x2="28" y2="52"/><ellipse cx="28" cy="30" rx="10" ry="22"/><ellipse cx="28" cy="30" rx="18" ry="22"/>
+              </g>
+              <circle cx="28" cy="30" r="22" fill="none" stroke="#C9962A" stroke-width="2"/>
+              <circle cx="44" cy="46" r="12" fill="#0A1F23"/>
+              <circle cx="44" cy="46" r="12" fill="none" stroke="#C9962A" stroke-width="1.5"/>
+              <g transform="translate(44 46) scale(0.22)"><path d="M 0,-42 L 14,-18 L 34,-26 L 26,-6 L 52,-4 L 38,14 L 44,38 L 18,30 L 14,62 L -14,62 L -18,30 L -44,38 L -38,14 L -52,-4 L -26,-6 L -34,-26 L -14,-18 Z" fill="#C41230"/></g>
+            </svg>
+            <span class="brand-text"><span class="brand-name">AFB Trade</span><span class="brand-tag">&amp; Services Inc.</span></span>
+          </a>
+          <p>A Canadian consultancy bridging North America and the Arabian Gulf — immigration, international trade, and real-estate services delivered with honesty and care.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="immigration.html">Immigration</a></li><li><a href="trading.html">Trading &amp; Export</a></li><li><a href="real-estate.html">Real Estate</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="immigration.html">Express Entry</a></li><li><a href="immigration.html">Business Investor</a></li><li><a href="immigration.html">Family Sponsorship</a></li><li><a href="immigration.html">Study Permits</a></li><li><a href="trading.html">Import / Export</a></li><li><a href="real-estate.html">Property Management</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><i class="fa-solid fa-location-dot"></i><span>Greater Toronto Area<br />Ontario, Canada</span></li><li><i class="fa-solid fa-phone"></i><a href="tel:+14165092198">(416) 509-2198</a></li><li><i class="fa-solid fa-envelope"></i><a href="mailto:info@afbtrade.ca">info@afbtrade.ca</a></li><li><i class="fa-solid fa-globe"></i><a href="https://afbtrade.ca">afbtrade.ca</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> AFB Trade &amp; Services Inc. All rights reserved.</p>
+        <p>Registered in Ontario · No&nbsp;Success&nbsp;–&nbsp;No&nbsp;Fee* terms apply to qualifying engagements.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
